@@ -1,4 +1,4 @@
-# Angular Component Cycler
+# Angular Component File Cycler
 
 https://marketplace.visualstudio.com/items?itemName=fordesoft.angular-component-file-cycler
 
