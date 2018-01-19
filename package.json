@@ -1,0 +1,43 @@
+{
+    "name": "angular-component-file-cycler",
+    "displayName": "Angular Component File Cycler",
+    "description": "Press Ctrl+K, Ctrl+O to cycle through the ts/html/scss files of a single Angular component.",
+    "version": "1.0.2",
+    "publisher": "fordesoft",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "icon": "images/icon.png",
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.cycleAngularComponentFiles"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.cycleAngularComponentFiles",
+            "title": "Cycle between Angular component files"
+        }],
+
+        "keybindings": [{
+            "command": "extension.cycleAngularComponentFiles",
+            "key": "ctrl+k ctrl+o",
+            "when": "editorTextFocus"
+        }]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
