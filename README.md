@@ -10,3 +10,6 @@ For example, if you have hello.component.ts open, you can activate this extensio
 
 Contact me at @Fordesoft on twitter, or you can contact me through http://www.fordesoft.com/
 
+##Contributing
+
+https://github.com/Josh1billion/angular-component-file-cycler/
