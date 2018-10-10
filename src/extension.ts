@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
         var currentFilenameWithoutExtension: string = currentFilename.substr(0, currentFilename.lastIndexOf('.') + 1);
 
         // if the current file doesn't appear to be an Angular component file, return
-        if (currentFileExtension != "ts" && currentFileExtension != "html" && currentFileExtension != "scss" && currentFileExtension != "css") {
+        if (currentFileExtension != "ts" && currentFileExtension != "html" && currentFileExtension != "scss" && currentFileExtension != "css" && currentFileExtension != "sass" && currentFileExtension != "less") {
             return;
         }
 
