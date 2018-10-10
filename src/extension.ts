@@ -27,10 +27,22 @@ export function activate(context: vscode.ExtensionContext) {
         else if (currentFileExtension == "html" && fileExists(currentFilenameWithoutExtension + "scss")) {
             newFileExtension = "scss";
         }
+        else if (currentFileExtension == "html" && fileExists(currentFilenameWithoutExtension + "sass")) {
+            newFileExtension = "sass";
+        }
+        else if (currentFileExtension == "html" && fileExists(currentFilenameWithoutExtension + "less")) {
+            newFileExtension = "less";
+        }
         else if (currentFileExtension == "html" && fileExists(currentFilenameWithoutExtension + "css")) {
             newFileExtension = "css";
         }
         else if (currentFileExtension == "scss" && fileExists(currentFilenameWithoutExtension + "ts")) {
+            newFileExtension = "ts";
+        }
+        else if (currentFileExtension == "sass" && fileExists(currentFilenameWithoutExtension + "ts")) {
+            newFileExtension = "ts";
+        }
+        else if (currentFileExtension == "less" && fileExists(currentFilenameWithoutExtension + "ts")) {
             newFileExtension = "ts";
         }
         else if (currentFileExtension == "css" && fileExists(currentFilenameWithoutExtension + "ts")) {
