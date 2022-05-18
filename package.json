@@ -2,7 +2,7 @@
     "name": "angular-component-file-cycler",
     "displayName": "Angular Component File Cycler",
     "description": "Press Ctrl+K, Ctrl+O to cycle through the ts/html/scss files of a single Angular component.",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "publisher": "fordesoft",
     "engines": {
         "vscode": "^1.19.0"
@@ -16,16 +16,24 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.cycleAngularComponentFiles",
-            "title": "Cycle between Angular component files"
-        }],
-
-        "keybindings": [{
-            "command": "extension.cycleAngularComponentFiles",
-            "key": "ctrl+k ctrl+o",
-            "when": "editorTextFocus"
-        }]
+        "commands": [
+            {
+                "command": "extension.cycleAngularComponentFiles",
+                "title": "Cycle between Angular component files"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.cycleAngularComponentFiles",
+                "key": "ctrl+k ctrl+o",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.cycleAngularComponentFiles",
+                "key": "command+k command+o",
+                "when": "editorTextFocus"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
@@ -36,9 +44,9 @@
         "publish": "vsce publish"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^17.0.34",
+        "typescript": "^4.6.4",
+        "vscode": "^1.1.6"
     }
 }
