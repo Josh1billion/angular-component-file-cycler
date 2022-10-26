@@ -12,7 +12,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.cycleAngularComponentFiles"
+        "onCommand:extension.cycleAngularComponentFiles",
+        "onCommand:extension.cycleAngularComponentFilesReverse"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -20,6 +21,10 @@
             {
                 "command": "extension.cycleAngularComponentFiles",
                 "title": "Cycle between Angular component files"
+            },
+            {
+                "command": "extension.cycleAngularComponentFilesReverse",
+                "title": "Reverse cycle between Angular component files"
             }
         ],
         "keybindings": [
